@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <script src="javascripts/sidebar.js"></script>
+
+</head>
+
+<body>
+  {{> header}}
+  <!-- contains the header.hbs file in partials in this syntax-->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <!-- body contains code of all other hbs files -->
+  <div class="container" style="margin:auto">
+    <!--bootstrap responsive page basically in index.hbs file-->
+    {{{body}}}
+  </div>
+
+  {{> footer}}
+  <!-- these links are always used so that so that javascript and jquery can be used -->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+    integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

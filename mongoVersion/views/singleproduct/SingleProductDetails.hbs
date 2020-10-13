@@ -1,0 +1,37 @@
+{{!-- s --}}
+{{# if products }}
+<div class="row" style="border-radius: 25px;padding:1rem;height:50rem; border: 1px solid#eff8efb2; margin-top:2rem">
+    <div class="col-sm-12 col-md-6 mr-auto">
+        <div>
+            <div class="rounded float-right ">
+                <img src=" {{ products.imagePath }}" id="product-title-image" class="img-responsive wideimg "
+                    style="padding: 2rem; margin:0 auto 0 auto; border:2px solid#e6ece68a;  height:45rem; width:auto" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 ml-auto" style="">
+        <div class="row" style="">
+            <h1 class=""> {{ products.title }}</h1>
+            <h3 class="">{{ products.description }}</h3>
+
+            <h4 class=""><i class="fa fa-inr" aria-hidden="true"></i> {{ products.price }}
+            </h4>
+
+                <a href="/add-to-cart/{{products._id}}" class="btn-success ">
+                    <button class="btn btn-primary " type="button">Add to cart</button>
+                </a>
+            {{!-- <center>
+                <div class="row">
+                   
+                </div>
+            </center> --}}
+        </div>
+    </div>
+</div>
+</div>
+{{/if}}
+{{!-- <div class="row"></div> --}}
+{{!-- <div class="row" style="margin: 2rem;">
+    <iframe style="width: 50%; height:40rem" src="http://localhost:3000/"></iframe>
+</div> --}}

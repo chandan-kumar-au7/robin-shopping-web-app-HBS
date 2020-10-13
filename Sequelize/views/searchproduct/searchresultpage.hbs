@@ -1,0 +1,53 @@
+<div class="row">
+    <center>
+        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+            <div id="success" class="alert alert-success {{#if noMessage}}invisible{{/if}}">
+                {{ successMgs }}
+            </div>
+        </div>
+    </center>
+</div>
+
+<div class="row" style="padding: 1rem; height:20rem;">
+    <center>
+        {{# each products }}
+        {{# each this }}
+        <hr>
+        <div class="row" style="border: 1px solid#90ee90;">
+            <div class="col-sm-3" style="">
+                <a href="/productdekho/{{this._id}}">
+                    <img src=" {{ this.imagePath }}" id="product-title-image" class="img-responsive wideimg"
+                        style="padding: 2rem; margin:0 auto 0 auto;  height:24rem; width:auto" alt="...">
+                </a>
+            </div>
+            <div class="col-sm-6" style="115, 255, 0);">
+                <h1 class="col-md-10 product-title text-truncate"> {{ this.title }}</h1>
+                <h3 class="col-md-10 product-title text-truncate">{{ this.description }}</h3>
+
+
+                <div class="col-md-10 body_text">
+                    {{ this.description }}
+                </div>
+
+            </div>
+
+            <div class="col-sm-3" style="">
+                <h4 class="row product-price "><i class="fa fa-inr" aria-hidden="true"></i> {{ this.price }}
+                </h4>
+
+                <div class="row " style="margin-bottom:1rem">
+                    <p class="product-option-text">Quantity</p>
+
+                    <div class="row">
+                        <a href="/add-to-cart/{{this._id}}" class="btn-success ">
+                            <button class="btn btn-primary " type="button">Add to cart</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/each}}
+    </center>
+</div>

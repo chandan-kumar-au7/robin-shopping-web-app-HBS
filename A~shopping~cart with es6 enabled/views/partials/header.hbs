@@ -1,0 +1,91 @@
+<nav class="navbar navbar-inverse" style="background-color: #90ee90; border:none; border-radius:0%,; margin:0rem">
+    <div class="container-fluid">
+        <div class="navbar-header" style="float: none;">
+            {{!-- ========================================================= --}}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="attractivesearchbar">
+                <form action="/searchbykey"  method="get">
+                    <input class="tageofinput" type="text" name="dsearch" placeholder="Search...">
+                    <div class="search"></div>
+                </form>
+            </div>
+
+            {{!-- ========================================================= --}}
+
+            <div class="brand header-links row-12">
+
+                {{!-- ========================================================= --}}
+                <div class="col-sm-12" style="float: left;">
+
+                    <button onclick="openMenu()">
+                        &#9776;
+                    </button>
+
+                    {{!-- ========================================================= --}}
+                    <a class="a_shopping_cart" href="/">A~Shopping~Cart</a>
+
+                </div>
+                <div class="col-sm-12 col" style="float: right;">
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        {{!-- ============================================================================================================ --}}
+                        <div style="float:right;">
+                            <a href="/shoppingcart">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="badge">{{session.cart.totalQty}}</span>
+                            </a>
+                        </div>
+
+                        {{!-- ============== --}}
+                        <div style="float:left;">
+                            {{!-- <li class="dropdown" > --}}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown dropdown-menu">
+                                {{# if login }}
+                                <li><a href="/user/profile">USER : {{ user }}</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="/user/logout">Logout</a></li>
+                                {{ else }}
+                                <li><a href="/user/signup">Sign up</a></li>
+                                <li><a href="/user/signin">Sign in</a></li>
+                                {{/if}}
+                            </div>
+                        </div>
+
+                        {{!-- ============================================================================================================ --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{!-- ========================================================= --}}
+
+<aside class="sidebar">
+    <button class="sidebar-close-button" onmouseover="closeMenu()">x</button>
+    <h3 id="allcategorytext">ALL Categories</h3>
+    <ul class="categorymargin">
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Food & Beverage</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Healthcare</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Electronics</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">TVs & Appliances</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Men</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Women</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Baby & Kids</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Home & Furniture</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Sports, Books & More</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Flights</a></li>
+        <li class="sidebarlists"><a class="sidebarlistsanchortag" href="/">Offer Zone</a></li>
+    </ul>
+</aside>
+</div>
